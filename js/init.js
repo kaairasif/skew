@@ -71,11 +71,11 @@ var viewportHeight = window.innerHeight;
 /* =  ANIMATE NUMBERS
 /*-------------------------------------------------*/
 $('#success_keys').one('inview', function(event, isInView, visiblePartX, visiblePartY){
-  $('#number-1').animateNumber({ number: 760},2000);
+  $('#number-1').animateNumber({ number: 760},3000);
 
-  $('#number-2').animateNumber({ number: 850},2000);
+  $('#number-2').animateNumber({ number: 850},3000);
 
-  $('#number-3').animateNumber({ number: 96},2000);
+  $('#number-3').animateNumber({ number: 96},3000);
 
   $('#number-4').animateNumber({ number: 12},3000);
 }); 
@@ -345,8 +345,12 @@ $(".js-rotating").Morphext({
       animation: "bounceIn",
       speed: 3000,
       complete: function () {
-          console.log("This is called after a phrase is animated in! Current phrase index: " + this.index);
+          // console.log("This is called after a phrase is animated in! Current phrase index: " + this.index);
       }
-  });
+});
+
+// Reveal Animations When Scrolling
+new WOW().init();
+
 
 })(jQuery);

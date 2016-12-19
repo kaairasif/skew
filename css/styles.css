@@ -386,6 +386,7 @@ GLOBAL STYLES
 .tlt {
     font-size: 50px;
     color: #f86e2f;
+    font-weight: 500;
 }
 
 /*---------------------------------------
@@ -682,9 +683,26 @@ GLOBAL STYLES
 .portfolioContainer li a {
     display: block;
     margin: 0 15px 0px 15px;
+    position: relative;
+    transition: all 0.3s;
 }
 
-
+.portfolioContainer > li > a > span {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    bottom: -52px;
+    background: rgba(0,0,0,0.7);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+.portfolioContainer > li > a:hover > span {
+    bottom: 0px;
+}
 .grid-item,
 .grid-sizer {
   float: left;
@@ -692,6 +710,7 @@ GLOBAL STYLES
   display: block;
   height: 240px;
   margin-bottom: 30px;
+  overflow: hidden;
 }
 
 .grid-item--width2 { width: 40%; }
